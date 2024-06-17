@@ -1,40 +1,32 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-
-typedef struct {
-
-};
- struct cadastro
- {
-    int telefone;
+struct Pacientes{
+    char telefone[15];
     char nome[200];
-    char endereco [200];
-    int quadra[200];
-    int lote[200];
-    char complemento [200];
-    char setor [200];
+    char endereco[200];
+    int quadra[10];
+    int lote[10];
+    char complemento[25];
+    //char setor [200];
     char cidade[200];
     int vazio;
- } ;
-
-
+} paciente[5];
+ 
 int main () {
 
     int opcao ,telefonecliente,retorno;
     do{
-        printf("=======================================================================================================================\n");
-        printf("=======================================================================================================================\n");
-        printf("=========================================|  1 - Realizar pedido            |===========================================\n");
-        printf("=========================================|  2 - Alterar pedido             |===========================================\n");
-        printf("=========================================|  3 - Alterar endereco           |===========================================\n");
-        printf("=========================================|  4 - Alterar valor dos produtos |===========================================\n");
-        printf("=========================================|  5 - Excluir pedido             |===========================================\n");
-        printf("=========================================|  6 - Sair do sistema            |===========================================\n");
-        printf("=======================================================================================================================\n");
-        printf("=======================================================================================================================\n");
-        printf("========================================== |      DIGITE UMA OPCAO        | ===========================================\n");
+        printf("==================================\n");
+        printf("|  1 - Realizar pedido           |\n");
+        printf("|  2 - Alterar pedido            |\n");
+        printf("|  3 - Alterar endereco          |\n");
+        printf("|  4 - Alterar valor dos produtos|\n");
+        printf("|  5 - Excluir pedido            |\n");
+        printf("|  6 - Sair do sistema           |\n");
+        printf("==================================\n");
+        printf("|        DIGITE UMA OPCAO        |\n");
         scanf ("%d",&opcao);
         getchar();
         system ("cls");
@@ -97,4 +89,5 @@ int main () {
 
     system("pause");
     return 0 ;
+	}
 }
